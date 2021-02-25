@@ -69,8 +69,10 @@ http://www.tooplate.com/view/2089-meteor
             <ul class="cd-hero-slider autoplay"> for slider auto play 
             <ul class="cd-hero-slider"> for disabled auto play
         -->
+            
             {% for header in  headers%}
-               <li class="selected first-slide" style="background-image : url({% static '/img/zulfi1.jpg' %})">
+            
+               <li class="{% if header1 == header %} selected {% endif %} first-slide" style="background-image : url({% static header.image %})">
                 <div class="cd-full-width">
                     <div class="tm-slide-content-div slide-caption">
                   
