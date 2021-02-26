@@ -119,20 +119,24 @@ p {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 .navbar-brand .logo{
-	margin-top: 22px;
-	background-image: url(../img/white_logo.png);
-	display: inline-block;
-	width: 125px;
-	height: 32px;
-	background-repeat: no-repeat;
+    margin-top: -4px;
+    background-image: url(../img/zulfi-logo2.png);
+    display: inline-block;
+    width: 138px;
+    height: 76px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: contain;
 }
 .header.active .navbar-brand .logo{
-	margin-top: 22px;
-	background-image: url(../img/black_logo.png);
-	display: inline-block;
-	width: 125px;
-	height: 32px;
-	background-repeat: no-repeat;
+    margin-top: -4px;
+    background-image: url(../img/zulfi-logo.png);
+    display: inline-block;
+    width: 138px;
+    height: 76px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: contain;
 }
 #main-nav {
 	background-color: transparent;
@@ -965,4 +969,16 @@ body.lb-disable-scrolling {
 	footer ul {
 		float: none;
 	}
+}
+
+
+.larg-img {
+
+	height: 500px;
+	object-fit: cover;
+}
+.small-img {
+
+	height: 235.0px;
+	object-fit: cover;
 }
