@@ -70,5 +70,25 @@ class AboutUs(models.Model):
         verbose_name_plural = _("من نحن")
 
 
+class OurPortfolio(models.Model):
+    name = models.CharField(max_length=200 , null=True, blank=True, help_text="اضف الفرع", verbose_name="الفرع")
 
 
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = _("أعمالنا")
+        verbose_name_plural = _("أعمالنا")
+
+class Image3(models.Model):
+    portfolio = models.ForeignKey(OurPortfolio ,null=True ,on_delete=models.CASCADE ,default=None, related_name="image")
+    image = models.ImageField(upload_to='zulfiapp/static/image')
+    
+    def __str__(self):
+        return str(self.image).split('static')[1]
+class InlineImage3(admin.TabularInline):
+    model = Image3
+
+class OurPortfolioAdmin(admin.ModelAdmin):
+    inlines = [InlineImage3]
